@@ -1,7 +1,7 @@
 # application
 This repo will be a practice env for laravel framework.
 
-## Instruction
+### Instructions
 * [Download](https://getcomposer.org/download/) composer on windows.
 * Clone repository using the command:
 ```
@@ -13,5 +13,5 @@ composer update
 ```
 
 
-## author
+### author
 [arelbernardo](https://www.facebook.com/arelbernardo)
