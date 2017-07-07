@@ -16,5 +16,10 @@ composer update
 ```
 npm install grunt --save-dev
 ```
+* After installing grunt, run:
+```
+npm install -g grunt-cli
+```
+
 ### author
 [arelbernardo](https://www.facebook.com/arelbernardo)
