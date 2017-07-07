@@ -27,7 +27,7 @@ This repo will be a practice env for laravel framework.
 >>> npm install grunt-contrib-compass --save-dev
 >>> npm install grunt-contrib-concat --save-dev
 ```
-_these are for grunt task runner dependencies_
+_these are for grunt task runner dependencies for compiling javascript files etc_
 
 
 
