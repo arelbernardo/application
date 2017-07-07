@@ -11,7 +11,10 @@ git clone https://github.com/arelbernardo/application.git
 ```
 composer update
 ```
-
-
+* Install [Node.js](https://nodejs.org/en/)
+* Install grunt. Go to< project_folder> and run:
+```
+npm install grunt --save-dev
+```
 ### author
 [arelbernardo](https://www.facebook.com/arelbernardo)
