@@ -20,6 +20,16 @@ This repo will be a practice env for laravel framework.
 ```
 >> npm install -g grunt-cli
 ```
+* run these for grunt dependencies:
+```
+>>> npm install grunt-contrib-uglify --save-dev
+>>> npm install grunt-contrib-watch --save-dev
+>>> npm install grunt-contrib-compass --save-dev
+>>> npm install grunt-contrib-concat --save-dev
+```
+_these are for grunt task runner dependencies_
+
+
 
 ### author
 [arelbernardo](https://www.facebook.com/arelbernardo)
