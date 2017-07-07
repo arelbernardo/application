@@ -8,11 +8,7 @@
     <title>{{ config('app.name', 'application') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-
-
-
+    <link rel="stylesheet" href="{{ asset('js/library/bootstrap/css/bootstrap.min.css') }}">
 </head>
 <body>
     <div id="app">
@@ -69,7 +65,15 @@
 
         @yield('content')
     </div>
-    @yield('scripts')
     <!-- Scripts -->
+    <script src="{{ asset('js/library/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('js/library/bootstrap/bootstrap.min.js') }}"></script>
+    @if(env('ENV_TYPE') == 'development')
+        <script src="{{ asset('js/app.js') }}"></script>
+    @else
+        <script src="{{ asset('js/app.min.js') }}"></script>
+    @endif
+    <!-- local scripts -->
+    @yield('scripts')
 </body>
 </html>
