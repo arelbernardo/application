@@ -9,6 +9,14 @@ module.exports = function(grunt) {
                 dest: 'public/js/app.js' //destination folder - unminified
             }  
         },
+        compass: {
+            dist: {
+                options: {
+                    sassDir: 'resources/assets/sass',
+                    cssDir: 'public/css'
+                }
+            }
+        },
         uglify: {
             dist: {
                 files: {
@@ -20,15 +28,17 @@ module.exports = function(grunt) {
         },
         watch: {
             files: [
-                'resources/assets/js/*.js' // add directores when modules are created
+                'resources/assets/js/*.js', // add directores when modules are created
+                'resources/assets/sass/*.scss'
             ],
             tasks: ['default']
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['concat', 'uglify']); // add compass when scss added
+    grunt.registerTask('default', ['concat', 'compass', 'uglify']);
 };
