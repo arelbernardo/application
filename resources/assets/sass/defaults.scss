@@ -1,0 +1,35 @@
+.navbar {
+  margin-bottom: 0;
+}
+
+/* naming convention
+  <type>_<module>_<element>
+  remove <type> if it will be used on other modules
+*/
+
+/* Home */
+.custom_fluid-container {
+  padding: 0;
+  & .custom_home-head-banner {
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid #dddddd;
+  }
+  & .app_container {
+    & .expenses_chart-container {
+      padding-top: 16px;
+      & .expenses_panel-container {
+        & .panel.panel-default {
+          & .panel-heading {
+            text-align: left;
+          }
+          & .panel-body {
+            padding: 16px;
+            & canvas {
+            }
+          }
+        }
+      }
+    }
+  }
+}

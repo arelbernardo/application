@@ -1,0 +1,7 @@
+//Customized bootstrap styles
+.panel {
+  border-radius: 0;
+  & .panel-heading {
+    padding: 6px 6px;
+  }
+}

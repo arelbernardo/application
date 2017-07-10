@@ -1,13 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-/* line 2, ../../resources/assets/sass/custom.scss */
-.panel {
-  border-radius: 0;
-}
-/* line 4, ../../resources/assets/sass/custom.scss */
-.panel .panel-heading {
-  padding: 6px 6px;
-}
-
 /* line 1, ../../resources/assets/sass/defaults.scss */
 .navbar {
   margin-bottom: 0;
