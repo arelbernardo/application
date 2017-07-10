@@ -9,6 +9,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('js/library/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
     <div id="app">
@@ -39,40 +40,36 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li>
-                                <a href="#">{{ Auth::user()->username }}</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-
-                        @endif
+                    @if (Auth::guest())
+                        <li><a href="{{ route('login') }}">Login</a></li>
+                        <li><a href="{{ route('register') }}">Register</a></li>
+                    @else
+                        <li><a href="#">{{ Auth::user()->username }}</a></li>
+                        <li>
+                            <a href="{{ route('logout') }}"
+                               onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    @endif
                     </ul>
                 </div>
             </div>
         </nav>
-
         @yield('content')
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/library/jquery/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('js/library/bootstrap/bootstrap.min.js') }}"></script>
-    @if(env('ENV_TYPE') == 'development')
-        <script src="{{ asset('js/app.js') }}"></script>
-    @else
-        <script src="{{ asset('js/app.min.js') }}"></script>
-    @endif
+    <script src="{{ asset('js/library/chart/Chart.min.js') }}"></script>
+@if(env('ENV_TYPE') == 'development')
+    <script src="{{ asset('js/app.js') }}"></script>
+@else
+    <script src="{{ asset('js/app.min.js') }}"></script>
+@endif
     <!-- local scripts -->
     @yield('scripts')
 </body>
