@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid custom_fluid-container">
+<div class="custom_fluid-container container-fluid">
     <div class="custom_home-head-banner">
         Lorem ipsum dolor sit amet ...
     </div>
-    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 app_container">
-        <div class="expenses_chart-container text-center col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+    <div class="app_container col-sm-12 col-xs-12 col-md-12 col-lg-12">
+        <div class="expenses_chart-container text-center row col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
             <!--daily spent-->
             <div class="expenses_panel-container col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Graph 1
+                        Top Categories
                     </div>
                     <div class="panel-body">
                         <canvas id="expense-one"></canvas>
@@ -22,7 +22,7 @@
             <div class="expenses_panel-container col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Graph 2
+                        Expenses for the last 3 Months
                     </div>
                     <div class="panel-body">
                         <canvas id="expense-two"></canvas>
