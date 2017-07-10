@@ -11,14 +11,14 @@ var HomeGraphs = (function($){
         };
         
         var expenseOne = function () {
-            var myDoughnutChart = new Chart(elemOne, {
+            new Chart(elemOne, {
                 type: 'doughnut',
                 data: {
+                    labels: ['Social', 'Personal', 'Personal'],
                     datasets: [{
                         data: [10, 20, 30],
                         backgroundColor: ['#FF6384', '#36A2EB', '#FF9F40']
-                    }],
-                    labels: ['Red', 'Blue', 'Orange']
+                    }]
                 },
                 options: {
                     legend: {
@@ -30,21 +30,27 @@ var HomeGraphs = (function($){
         };
 
         var expenseTwo = function () {
-            var myDoughnutChart = new Chart(elemTwo, {
-                type: 'doughnut',
+            new Chart(elemTwo, {
+                type: 'line',
                 data: {
+                    labels: ['May', 'June', 'July'],
                     datasets: [{
-                        data: [14, 50, 20],
-                        backgroundColor: [ '#36A2EB', '#FF9F40', '#FF6384']
-                    }],
-                    labels: ['Blue', 'Orange', 'Red']
+                        data: [86, 114, 106],
+                        label: "Total expenses per month",
+                        borderColor: "#3e95cd",
+                        fill: false
+                    }]
                 },
                 options: {
                     legend: {
                         position: 'bottom'
+                    },
+                    elements: {
+                        line: {
+                            tension: 0
+                        }
                     }
                 }
-
             });
         };
 
