@@ -29,6 +29,7 @@ This repo will be a practice env for laravel framework.
 ```
 _these are for grunt task runner dependencies for compiling javascript files etc_
 
+* run ``` php artisan migrate ``` then ``` php artisan db:seed ```
 
 
 ### author
