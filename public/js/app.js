@@ -42,6 +42,7 @@ var HomeGraphs = (function($){
                     }]
                 },
                 options: {
+                    maintainAspectRatio: false,
                     legend: {
                         position: 'bottom'
                     },

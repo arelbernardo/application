@@ -28,9 +28,9 @@
   height: 350px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 19, ../../resources/assets/sass/defaults.scss */
-.custom_fluid-container .app_container .expenses_chart-container {
-  padding-top: 16px;
+/* line 18, ../../resources/assets/sass/defaults.scss */
+.custom_fluid-container .app_container {
+  padding-top: 50px;
 }
 /* line 23, ../../resources/assets/sass/defaults.scss */
 .custom_fluid-container .app_container .expenses_chart-container .expenses_panel-container .panel.panel-default .panel-heading {
