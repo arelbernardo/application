@@ -1,8 +1,108 @@
-/* line 2, ../../resources/assets/sass/custom.scss */
-.panel {
-  border-radius: 0;
+/*----------My variables----------*/
+@font-face {
+  font-family: 'Raleway-Black';
+  src: url("/fonts/Raleway-Black.ttf");
 }
-/* line 4, ../../resources/assets/sass/custom.scss */
+@font-face {
+  font-family: 'Raleway-BlackItalic';
+  src: url("/fonts/Raleway-BlackItalic.ttf");
+}
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url("/fonts/Raleway-Bold.ttf");
+}
+@font-face {
+  font-family: 'Raleway-BoldItalic';
+  src: url("/fonts/Raleway-BoldItalic.ttf");
+}
+@font-face {
+  font-family: 'Raleway-ExtraBold';
+  src: url("/fonts/Raleway-ExtraBold.ttf");
+}
+@font-face {
+  font-family: 'Raleway-ExtraBoldItalic';
+  src: url("/fonts/Raleway-ExtraBoldItalic.ttf");
+}
+@font-face {
+  font-family: 'Raleway-ExtraLight';
+  src: url("/fonts/Raleway-ExtraLight.ttf");
+}
+@font-face {
+  font-family: 'Raleway-ExtraLightItalic';
+  src: url("/fonts/Raleway-ExtraLightItalic.ttf");
+}
+@font-face {
+  font-family: 'Raleway-Italic';
+  src: url("/fonts/Raleway-Italic.ttf");
+}
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url("/fonts/Raleway-Light.ttf");
+}
+@font-face {
+  font-family: 'Raleway-LightItalic';
+  src: url("/fonts/Raleway-LightItalic.ttf");
+}
+@font-face {
+  font-family: 'Raleway-Medium';
+  src: url("/fonts/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: 'Raleway-MediumItalic';
+  src: url("/fonts/Raleway-MediumItalic.ttf");
+}
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url("/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: 'Raleway-SemiBold';
+  src: url("/fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: 'Raleway-SemiBoldItalic';
+  src: url("/fonts/Raleway-SemiBoldItalic.ttf");
+}
+@font-face {
+  font-family: 'Raleway-Thin';
+  src: url("/fonts/Raleway-Thin.ttf");
+}
+@font-face {
+  font-family: 'Raleway-ThinItalic';
+  src: url("/fonts/Raleway-ThinItalic.ttf");
+}
+/* line 5, ../../resources/assets/sass/custom.scss */
+.navbar {
+  margin-bottom: 0;
+  min-height: 85px;
+}
+
+/* line 9, ../../resources/assets/sass/custom.scss */
+.navbar-brand {
+  height: 85px;
+  line-height: 50px;
+  font-family: Raleway-Bold;
+}
+
+/* line 14, ../../resources/assets/sass/custom.scss */
+.navbar-toggle {
+  margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+  /* line 20, ../../resources/assets/sass/custom.scss */
+  .navbar-nav > li > a {
+    line-height: 50px;
+  }
+}
+/* line 28, ../../resources/assets/sass/custom.scss */
 .panel .panel-heading {
   padding: 6px 6px;
+}
+
+/* line 33, ../../resources/assets/sass/custom.scss */
+.panel,
+.form-control,
+.btn {
+  border-radius: 0;
 }

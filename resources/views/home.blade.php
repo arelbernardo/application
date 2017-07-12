@@ -5,8 +5,8 @@
     <div class="custom_home-head-banner">
         Lorem ipsum dolor sit amet ...
     </div>
-    <div class="app_container col-sm-12 col-xs-12 col-md-12 col-lg-12">
-        <div class="expenses_chart-container text-center row col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
+    <div class="app_container col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3">
+        <div class="expenses_chart-container">
             <!--daily spent-->
             <div class="expenses_panel-container col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <div class="panel panel-default">

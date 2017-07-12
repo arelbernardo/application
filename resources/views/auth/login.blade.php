@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="custom_no-header-container col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
             <div class="panel panel-default">
-                <div class="panel-heading"></div>
+                <div class="panel-heading text-center">Login</div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
@@ -40,7 +40,7 @@
                                     sign in
                                 </button>
                             </div>
-                            <div class="col-md-6">
+                            {{--<div class="col-md-6">
                                 <div class="pull-right">
                                     <div class="checkbox">
                                         <label>
@@ -48,14 +48,14 @@
                                         </label>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--}}
                         </div>
 
-                        <div class="form-group">
+                        {{--<div class="form-group">
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
                                 </a>
-                        </div>
+                        </div>--}}
                     </form>
                 </div>
             </div>
