@@ -1,17 +1,29 @@
-var HomeGraphs = (function($){
-    var HomeGraphs = function () {
+var HomeExpenseWidget = (function($) {
+    var HomeExpenseWidget = function (config) {
 
-        var elemOne = 'expense-one';
-        var elemTwo = 'expense-two';
+        var $daily_remaining_budget = $('#chart_daily-remaining-budget');
+        var $month_remaining_budget = $('#chart_month-remaining-budget');
+        var $top_categories = $('#chart_top-categories');
+        var $three_month_forecast = $('#chart_three-month-forecast');
 
         var init = function () {
-            //todo:
-            expenseOne();
-            expenseTwo();
+
+            showDailyRemaining();
+            showMonthRemaining();
+            showTopCategories();
+            showThreeMonthForecast();
         };
-        
-        var expenseOne = function () {
-            new Chart(elemOne, {
+
+        var showDailyRemaining = function () {
+
+        };
+
+        var showMonthRemaining = function () {
+
+        };
+
+        var showTopCategories = function () {
+            new Chart($top_categories, {
                 type: 'doughnut',
                 data: {
                     labels: ['Social', 'Personal', 'Personal'],
@@ -21,6 +33,7 @@ var HomeGraphs = (function($){
                     }]
                 },
                 options: {
+                    maintainAspectRatio: false,
                     legend: {
                         position: 'bottom'
                     }
@@ -29,8 +42,8 @@ var HomeGraphs = (function($){
             });
         };
 
-        var expenseTwo = function () {
-            new Chart(elemTwo, {
+        var showThreeMonthForecast = function () {
+            new Chart($three_month_forecast, {
                 type: 'line',
                 data: {
                     labels: ['May', 'June', 'July'],
@@ -58,6 +71,5 @@ var HomeGraphs = (function($){
         init();
         return {};
     };
-    
-    return HomeGraphs;
+    return HomeExpenseWidget;
 })($);

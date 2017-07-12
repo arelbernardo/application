@@ -76,10 +76,16 @@
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 992px;
 $breakpoint-hd: 1200px;
-//font sizes
-$header: 16px;
-$label: 13px;
-$small: 12px;
-$tooltip: 8px;
+//font size
+$font-xxl: 32px;
+$font-xl: 24px;
+$font-l: 18px;
+$font-m: 15px;
+$font-s: 12px;
+$font-xs: 8px;
 //border
 $border: 1px solid #e7e7e7;
+
+//theme color
+$primary: #000000;
+$shaded: #aaaaaa;

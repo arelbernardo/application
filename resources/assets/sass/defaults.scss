@@ -29,7 +29,7 @@ html, body {
       list-style: none;
       & li {
         font-family: Raleway-Regular;
-        font-size: $small;
+        font-size: $font-s;
         margin-left: 10px;
         display: block;
         float:left;
@@ -37,8 +37,6 @@ html, body {
     }
   }
 }
-
-
 //login and register margin-top
 .custom_no-header-container {
   margin-top: 20px;
@@ -58,17 +56,30 @@ html, body {
   }
   & .app_container {
     padding-top: 50px;
-    & .expenses_chart-container {
-      & .expenses_panel-container {
-        & .panel.panel-default {
-          & .panel-heading {
+    & .expenses_budget {
+      & .panel.panel-default {
+        & .panel-body {
+          height: 120px;
+          & p#label_expense_description_title {
             text-align: left;
+            font-family: Raleway-ExtraBold;
+            font-size: $font-l;
+            color: $shaded;
           }
-          & .panel-body {
-            min-height: 300px;
-            padding: 16px;
-            & canvas {
-            }
+          & p#label_expense_amount {
+            text-align: right;
+            font-size: $font-xxl;
+            color: $primary;
+          }
+        }
+      }
+    }
+    & .chart_widget {
+      & .panel.panel-default {
+        & .panel-body {
+          & canvas {
+            width: 300px;
+            height: 300px;
           }
         }
       }

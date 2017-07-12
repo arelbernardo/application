@@ -18,9 +18,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/test', function () {
-        return \App\User::with('monthlyBudget', 'expenses.category', 'expenses.type', 'expenses.typeDetails')->find(1);
-    });
-});

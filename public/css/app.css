@@ -226,38 +226,51 @@ html, body {
   float: left;
 }
 
-/* line 43, ../../resources/assets/sass/defaults.scss */
+/* line 41, ../../resources/assets/sass/defaults.scss */
 .custom_no-header-container {
   margin-top: 20px;
 }
 
 @media (min-width: 768px) {
-  /* line 47, ../../resources/assets/sass/defaults.scss */
+  /* line 45, ../../resources/assets/sass/defaults.scss */
   .custom_no-header-container {
     margin-top: 100px;
   }
 }
 /* Home */
-/* line 52, ../../resources/assets/sass/defaults.scss */
+/* line 50, ../../resources/assets/sass/defaults.scss */
 .custom_fluid-container {
   padding: 0;
 }
-/* line 54, ../../resources/assets/sass/defaults.scss */
+/* line 52, ../../resources/assets/sass/defaults.scss */
 .custom_fluid-container .custom_home-head-banner {
   width: 100%;
   height: 350px;
   border-bottom: 1px solid #e7e7e7;
 }
-/* line 59, ../../resources/assets/sass/defaults.scss */
+/* line 57, ../../resources/assets/sass/defaults.scss */
 .custom_fluid-container .app_container {
   padding-top: 50px;
 }
-/* line 64, ../../resources/assets/sass/defaults.scss */
-.custom_fluid-container .app_container .expenses_chart-container .expenses_panel-container .panel.panel-default .panel-heading {
-  text-align: left;
+/* line 61, ../../resources/assets/sass/defaults.scss */
+.custom_fluid-container .app_container .expenses_budget .panel.panel-default .panel-body {
+  height: 120px;
 }
-/* line 67, ../../resources/assets/sass/defaults.scss */
-.custom_fluid-container .app_container .expenses_chart-container .expenses_panel-container .panel.panel-default .panel-body {
-  min-height: 300px;
-  padding: 16px;
+/* line 63, ../../resources/assets/sass/defaults.scss */
+.custom_fluid-container .app_container .expenses_budget .panel.panel-default .panel-body p#label_expense_description_title {
+  text-align: left;
+  font-family: Raleway-ExtraBold;
+  font-size: 18px;
+  color: #aaaaaa;
+}
+/* line 69, ../../resources/assets/sass/defaults.scss */
+.custom_fluid-container .app_container .expenses_budget .panel.panel-default .panel-body p#label_expense_amount {
+  text-align: right;
+  font-size: 32px;
+  color: #000000;
+}
+/* line 80, ../../resources/assets/sass/defaults.scss */
+.custom_fluid-container .app_container .chart_widget .panel.panel-default .panel-body canvas {
+  width: 300px;
+  height: 300px;
 }
