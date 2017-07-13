@@ -11,10 +11,31 @@
 |
 */
 
+
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+/*----------------HOME----------------*/
+Route::get('/', [
+    'as' => 'home',
+    'uses' => 'HomeController@index']
+);
+/*----------------PROFILE----------------*/
+Route::group([
+    'prefix' => '/{profile_name}',
+    'as' => 'profile.'
+    ], function () {
+        Route::get('/', [
+            'as' => 'index',
+            'uses' => 'ProfileController@index'
+        ]);
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+

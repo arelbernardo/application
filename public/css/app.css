@@ -111,15 +111,20 @@
 }
 
 /* line 39, ../../resources/assets/sass/custom.scss */
+.navbar-nav li hr {
+  margin: 16px 0;
+}
+/* line 42, ../../resources/assets/sass/custom.scss */
 .navbar-nav li .dropdown-menu {
   font-size: 12px;
   margin-top: 5px;
+  padding: 16px 0;
   border-radius: 0;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.175);
 }
 @media (min-width: 768px) {
-  /* line 47, ../../resources/assets/sass/custom.scss */
+  /* line 51, ../../resources/assets/sass/custom.scss */
   .navbar-nav li .dropdown-menu:before {
     content: ' ';
     display: block;
@@ -132,7 +137,7 @@
     border-style: solid;
     border-color: #d6d6d6 transparent;
   }
-  /* line 59, ../../resources/assets/sass/custom.scss */
+  /* line 63, ../../resources/assets/sass/custom.scss */
   .navbar-nav li .dropdown-menu:after {
     content: ' ';
     position: absolute;
@@ -146,12 +151,12 @@
   }
 }
 
-/* line 76, ../../resources/assets/sass/custom.scss */
+/* line 80, ../../resources/assets/sass/custom.scss */
 .panel .panel-heading {
   padding: 6px 6px;
 }
 
-/* line 81, ../../resources/assets/sass/custom.scss */
+/* line 85, ../../resources/assets/sass/custom.scss */
 .panel,
 .form-control,
 .btn {

@@ -7,14 +7,17 @@
     <div class="app_container col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
         <div class="expenses_add-expense row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="modal_add-expense" data-backdrop="false" data-keyboard="false" data-focus="true"></div>
                 <div class="form-group pull-right">
-                    <button class="btn btn-default btn-sm" type="button" title="add an expense">
-                        <i class="glyphicon glyphicon-plus"></i>
-                    </button>
+                    @include('resources.button.add', array(
+                        'id' => 'btn_add-expense',
+                        'title' => 'add an expense',
+                        'hasIcon' => true
+                    ))
                 </div>
             </div>
         </div>
-        @include('home.partials.widgets')
+        @include('profile.partials.widgets')
     </div>
 </div>
 @endsection

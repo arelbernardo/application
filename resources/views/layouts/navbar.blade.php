@@ -34,6 +34,11 @@
                             {{ Auth::user()->username }} &nbsp;<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{route('profile.index', Auth::user()->username )}}">my profile</a></li>
+                            <hr>
+                            <li><a href="#">settings</a></li>
+                            <li><a href="#">about</a></li>
+                            <hr>
                             <li>
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     logout
@@ -41,12 +46,6 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
-                            </li>
-                            <li>
-                                <a href="#">help</a>
-                            </li>
-                            <li>
-                                <a href="#">about</a>
                             </li>
                         </ul>
                     </li>
