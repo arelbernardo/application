@@ -29,15 +29,26 @@
                     <li><a href="{{ route('login') }}">sign in</a></li>
                     <li><a href="{{ route('register') }}">sign up</a></li>
                 @else
-                    {{--<li><a href="#">{{ Auth::user()->username }}</a></li>--}}
-                    <li>
-                        <a href="{{ route('logout') }}"
-                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                            logout
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->username }} &nbsp;<span class="caret"></span>
                         </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                            <li>
+                                <a href="#">help</a>
+                            </li>
+                            <li>
+                                <a href="#">about</a>
+                            </li>
+                        </ul>
                     </li>
                 @endif
             </ul>
