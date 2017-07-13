@@ -3,6 +3,7 @@
 @import "variables";
 // navbar
 .navbar {
+  background-color: $theme_primary;
   margin-bottom: 0;
   min-height: 85px;
 }
@@ -10,6 +11,7 @@
   height: 85px;
   line-height: 50px;
   font-family: Raleway-Bold;
+  color: $font_primary !important;
 }
 .navbar-toggle {
   margin-top: 25px;
@@ -19,6 +21,52 @@
     &>li{
       &>a {
         line-height: 50px;
+      }
+    }
+  }
+}
+//navbar dropdown
+.caret {
+  color: $font_primary !important;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+  background-color: transparent;
+}
+.navbar-nav {
+  & li {
+    & .dropdown-menu {
+      font-size: $font-s;
+      margin-top: 5px;
+      border-radius: 0;
+      -webkit-box-shadow: $box_shadow;
+      box-shadow: $box_shadow;
+    }
+    @media (min-width: 768px) {
+      & .dropdown-menu:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        top: -8px;
+        right: 9px;
+        width: 0;
+        border: $border_secondary_color;
+        border-width: 0 8px 8px;
+        border-style: solid;
+        border-color: $border_secondary_color transparent;
+      }
+      & .dropdown-menu:after {
+        content: ' ';
+        position: absolute;
+        top: -6px;
+        right: 11px;
+        width: 0;
+        border: $border_secondary_color;
+        border-width: 0 6px 6px;
+        border-style: solid;
+        border-color: #fff transparent;
+
       }
     }
   }

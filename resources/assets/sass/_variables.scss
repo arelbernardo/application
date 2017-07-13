@@ -85,7 +85,16 @@ $font-s: 12px;
 $font-xs: 8px;
 //border
 $border: 1px solid #e7e7e7;
+$border_darker: 1px solid #d6d6d6;
+$border_primary_color: #e7e7e7;
+$border_secondary_color: #d6d6d6;
 
 //theme color
-$primary: #000000;
-$shaded: #aaaaaa;
+$theme_primary: #fff;
+$theme_shaded: #aaaaaa;
+
+//font
+$font_primary: #000;
+$font_secondary: #aaaaaa;
+
+$box_shadow: 0 1px 3px rgba(0,0,0,.175);

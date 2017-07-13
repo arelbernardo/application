@@ -74,34 +74,84 @@
 }
 /* line 5, ../../resources/assets/sass/custom.scss */
 .navbar {
+  background-color: #fff;
   margin-bottom: 0;
   min-height: 85px;
 }
 
-/* line 9, ../../resources/assets/sass/custom.scss */
+/* line 10, ../../resources/assets/sass/custom.scss */
 .navbar-brand {
   height: 85px;
   line-height: 50px;
   font-family: Raleway-Bold;
+  color: #000 !important;
 }
 
-/* line 14, ../../resources/assets/sass/custom.scss */
+/* line 16, ../../resources/assets/sass/custom.scss */
 .navbar-toggle {
   margin-top: 25px;
 }
 
 @media (min-width: 768px) {
-  /* line 20, ../../resources/assets/sass/custom.scss */
+  /* line 22, ../../resources/assets/sass/custom.scss */
   .navbar-nav > li > a {
     line-height: 50px;
   }
 }
-/* line 28, ../../resources/assets/sass/custom.scss */
+/* line 29, ../../resources/assets/sass/custom.scss */
+.caret {
+  color: #000 !important;
+}
+
+/* line 32, ../../resources/assets/sass/custom.scss */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: transparent;
+}
+
+/* line 39, ../../resources/assets/sass/custom.scss */
+.navbar-nav li .dropdown-menu {
+  font-size: 12px;
+  margin-top: 5px;
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.175);
+}
+@media (min-width: 768px) {
+  /* line 47, ../../resources/assets/sass/custom.scss */
+  .navbar-nav li .dropdown-menu:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 9px;
+    width: 0;
+    border: #d6d6d6;
+    border-width: 0 8px 8px;
+    border-style: solid;
+    border-color: #d6d6d6 transparent;
+  }
+  /* line 59, ../../resources/assets/sass/custom.scss */
+  .navbar-nav li .dropdown-menu:after {
+    content: ' ';
+    position: absolute;
+    top: -6px;
+    right: 11px;
+    width: 0;
+    border: #d6d6d6;
+    border-width: 0 6px 6px;
+    border-style: solid;
+    border-color: #fff transparent;
+  }
+}
+
+/* line 76, ../../resources/assets/sass/custom.scss */
 .panel .panel-heading {
   padding: 6px 6px;
 }
 
-/* line 33, ../../resources/assets/sass/custom.scss */
+/* line 81, ../../resources/assets/sass/custom.scss */
 .panel,
 .form-control,
 .btn {
@@ -261,13 +311,13 @@ html, body {
   text-align: left;
   font-family: Raleway-ExtraBold;
   font-size: 18px;
-  color: #aaaaaa;
+  color: #000;
 }
 /* line 69, ../../resources/assets/sass/defaults.scss */
 .custom_fluid-container .app_container .expenses_budget .panel.panel-default .panel-body p#label_expense_amount {
   text-align: right;
   font-size: 32px;
-  color: #000000;
+  color: #000;
 }
 /* line 80, ../../resources/assets/sass/defaults.scss */
 .custom_fluid-container .app_container .chart_widget .panel.panel-default .panel-body canvas {

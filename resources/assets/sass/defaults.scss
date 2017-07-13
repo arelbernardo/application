@@ -64,12 +64,12 @@ html, body {
             text-align: left;
             font-family: Raleway-ExtraBold;
             font-size: $font-l;
-            color: $shaded;
+            color: $font_primary;
           }
           & p#label_expense_amount {
             text-align: right;
             font-size: $font-xxl;
-            color: $primary;
+            color: $font_primary;
           }
         }
       }
