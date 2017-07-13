@@ -1,5 +1,5 @@
-var HomeExpenseWidget = (function($) {
-    var HomeExpenseWidget = function (config) {
+var ProfileExpenseWidget = (function($) {
+    var ProfileExpenseWidget = function (config) {
         
         //element declaration
         var $modal_add_expense = $('#modal_add-expense');
@@ -10,6 +10,7 @@ var HomeExpenseWidget = (function($) {
         
         //buttons
         var $btn_add_expense = $('#btn_add-expense');
+        
         //methods
         var init = function () {
             bindUiActions();
@@ -88,21 +89,21 @@ var HomeExpenseWidget = (function($) {
         init();
         return {};
     };
-    return HomeExpenseWidget;
+    return ProfileExpenseWidget;
 })($);
-var HomeManager = (function ($) {
-    var HomeManager = function () {
+var ProfileManager = (function ($) {
+    var ProfileManager = function () {
 
         
 
         var init = function () {
             //todo:
-            new HomeExpenseWidget();
+            new ProfileExpenseWidget();
         };
 
         init();
         return {};
     };
     
-    return HomeManager;
+    return ProfileManager;
 })($);

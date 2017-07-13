@@ -23,6 +23,6 @@
 @endsection
 @section('scripts')
 <script>
-    new HomeManager();
+    new ProfileManager();
 </script>
 @endsection

@@ -10,6 +10,7 @@ var ProfileExpenseWidget = (function($) {
         
         //buttons
         var $btn_add_expense = $('#btn_add-expense');
+        
         //methods
         var init = function () {
             bindUiActions();
