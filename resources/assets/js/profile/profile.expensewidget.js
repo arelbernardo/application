@@ -1,5 +1,5 @@
-var HomeExpenseWidget = (function($) {
-    var HomeExpenseWidget = function (config) {
+var ProfileExpenseWidget = (function($) {
+    var ProfileExpenseWidget = function (config) {
         
         //element declaration
         var $modal_add_expense = $('#modal_add-expense');
@@ -88,5 +88,5 @@ var HomeExpenseWidget = (function($) {
         init();
         return {};
     };
-    return HomeExpenseWidget;
+    return ProfileExpenseWidget;
 })($);

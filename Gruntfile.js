@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                src: [
-                   'resources/assets/js/home/*.js' // add directores when modules are created
+                   'resources/assets/js/profile/*.js' // add directores when modules are created
                ],
                 dest: 'public/js/app.js' //destination folder - unminified
             }  
@@ -21,14 +21,14 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'public/js/app.min.js': [ //destination folder - minified
-                        'resources/assets/js/home/*.js' // add directores when modules are created
+                        'resources/assets/js/profile/*.js' // add directores when modules are created
                     ]
                 }
             }
         },
         watch: {
             files: [
-                'resources/assets/js/home/*.js', // add directores when modules are created
+                'resources/assets/js/profile/*.js', // add directores when modules are created
                 'resources/assets/sass/*.scss'
             ],
             tasks: ['default']
