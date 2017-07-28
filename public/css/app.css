@@ -329,3 +329,11 @@ html, body {
   width: 300px;
   height: 300px;
 }
+
+/*navigation bar loader */
+/* line 90, ../../resources/assets/sass/defaults.scss */
+#load-indicator {
+  height: 5px;
+  display: none;
+  margin-bottom: 0;
+}

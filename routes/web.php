@@ -32,6 +32,10 @@ Route::group([
             'as' => 'index',
             'uses' => 'ProfileController@index'
         ]);
+        Route::get('/addExpenseModal', [
+            'as' => 'addExpenseModal',
+            'uses' => 'ProfileController@addExpenseModal'
+        ]);
 });
 
 

@@ -8,21 +8,21 @@
     <title>{{ config('app.name', 'application') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('js/library/jquery/jquery-ui.min.css') }}">
     <link rel="stylesheet" href="{{ asset('js/library/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
     <div id="app" class="wrapper">
         @include('layouts.navbar')
+        <div style="height:95px;"></div>
         @yield('content')
-        {{--<div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-        </div>--}}
         <div class="push"></div>
     </div>
     @include('layouts.footer')
     <!-- Scripts -->
     <script src="{{ asset('js/library/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('js/library/jquery/jquery-ui.min.js') }}"></script>
     <script src="{{ asset('js/library/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/library/chart/Chart.min.js') }}"></script>
 @if(env('ENV_TYPE') == 'development')
@@ -30,7 +30,10 @@
 @else
     <script src="{{ asset('js/app.min.js') }}"></script>
 @endif
-    <!-- local scripts -->
-    @yield('scripts')
+<!-- local scripts -->
+@yield('scripts')
+<script>
+    new AppGlobalListener();
+</script>
 </body>
 </html>

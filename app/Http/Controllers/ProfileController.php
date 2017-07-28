@@ -14,4 +14,9 @@ class ProfileController extends Controller
     public function index($profile_name) {
         return view('profile.index');
     }
+    //non-transaction methods here
+    public function addExpenseModal() {
+        return view('resources.modal.expense_createupdate');
+    }
+    //transactional methods here
 }

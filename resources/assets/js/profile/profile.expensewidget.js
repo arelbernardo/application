@@ -2,15 +2,10 @@ var ProfileExpenseWidget = (function($) {
     var ProfileExpenseWidget = function (config) {
         
         //element declaration
-        var $modal_add_expense = $('#modal_add-expense');
         var $daily_remaining_budget = $('#chart_daily-remaining-budget');
         var $month_remaining_budget = $('#chart_month-remaining-budget');
         var $top_categories = $('#chart_top-categories');
         var $three_month_forecast = $('#chart_three-month-forecast');
-        
-        //buttons
-        var $btn_add_expense = $('#btn_add-expense');
-        
         //methods
         var init = function () {
             bindUiActions();
@@ -21,15 +16,11 @@ var ProfileExpenseWidget = (function($) {
         };
 
         var bindUiActions = function () {
-            $btn_add_expense.click(function () {
-                showAddExpenseForm();
-            });
+            //todo
         };
 
         var showAddExpenseForm = function () {
-            $modal_add_expense.load('url_here', function () {//todo
-                $modal_add_expense.modal();
-            });
+
         };
 
         var showDailyRemaining = function () {
