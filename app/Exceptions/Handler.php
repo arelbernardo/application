@@ -5,9 +5,18 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
+    //error code
+    const CODE_PAGE_NOT_FOUND = 404;
+    const CODE_INT_SERVER_ERROR =  500;
+    //error message
+    const MSG_NOT_FOUND = 'Page not found.';
+    const MSG_INTERNAL_SERVER = 'Internal server error.';
+
+
     /**
      * A list of the exception types that should not be reported.
      *
@@ -44,6 +53,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if($exception instanceof NotFoundHttpException)//404
+        {
+            return response()->view('errors.404', array(
+                'code' => self::CODE_PAGE_NOT_FOUND,
+                'msg' => self::MSG_NOT_FOUND),
+            404);
+        }
         return parent::render($request, $exception);
     }
 

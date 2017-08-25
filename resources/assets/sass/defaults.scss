@@ -37,6 +37,19 @@ html, body {
     }
   }
 }
+//custom error messages eg. 404 not found
+.container_error {
+  height: 300px;
+  color: white;
+  background-color: $warning;
+  padding-top: 120px;
+  & .error_code {
+    font-size: $font-banner;
+  }
+  & .error_message {
+    font-size: $font-m;
+  }
+}
 //login and register margin-top
 .custom_no-header-container {
   margin-top: 20px;
@@ -56,7 +69,24 @@ html, body {
   }
   & .app_container {
     padding-top: 50px;
-    & .expenses_budget {
+    & #organizer_container {
+      & .organizer_item_container {
+        & .organizer_item {
+          height: 300px;
+          border: $border;
+          padding: 0;
+          margin: 0;
+          & .organizer_banner {
+            height: 210px;
+            border-bottom: $border;
+            & .organizer_title {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    /*& .expenses_budget {
       & .panel.panel-default {
         & .panel-body {
           height: 120px;
@@ -83,7 +113,7 @@ html, body {
           }
         }
       }
-    }
+    }*/
   }
 }   
 /*navigation bar loader */
