@@ -9,9 +9,10 @@ class ProfileController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('profile');
     }
 
-    public function index($profile_name) {
+    public function index() {
         return view('profile.index');
     }
     //non-transaction methods here
