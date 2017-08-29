@@ -27,7 +27,11 @@ html, body {
     padding: 30px 16px;
     & .footer-site-links {
       list-style: none;
+      padding: 0 !important;
       & li {
+        &:first-child {
+          margin-left: 0;
+        }
         font-family: Raleway-Regular;
         font-size: $font-s;
         margin-left: 10px;
