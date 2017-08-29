@@ -19,7 +19,7 @@ class ProfileMiddleware
         $url = $request->url();
         $user = explode('/',$url)[3];
         if(User::where('username', $user)->count() === 0) {
-            return redirect('/');
+            return abort(404);
         }
         return $next($request);
     }
