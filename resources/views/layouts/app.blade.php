@@ -16,7 +16,11 @@
     <div id="app" class="wrapper">
         @include('layouts.navbar')
         <div style="height:95px;"></div>
-        @yield('content')
+        <div class="custom_fluid-container container-fluid">
+            <div class="app_container container">
+                @yield('content')
+            </div>
+        </div>
         <div class="push"></div>
     </div>
     @include('layouts.footer')

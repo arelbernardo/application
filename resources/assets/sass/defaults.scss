@@ -19,6 +19,18 @@ html, body {
     height: 300px;
   }
 }
+//body container
+.custom_fluid-container {
+  padding: 0;
+  & .custom_home-head-banner {
+    width: 100%;
+    height: 350px;
+    border-bottom: $border;
+  }
+  & .app_container {
+    padding-top: 25px;
+  }
+}
 //Footer
 .footer {
   height: 200px;
@@ -63,66 +75,33 @@ html, body {
     margin-top: 100px;
   }
 }
-/* Home */
-.custom_fluid-container {
-  padding: 0;
-  & .custom_home-head-banner {
-    width: 100%;
-    height: 350px;
-    border-bottom: $border;
-  }
-  & .app_container {
-    padding-top: 50px;
-    & #organizer_container {
-      & .organizer_item_container {
-        & .organizer_item {
-          height: 300px;
-          border: $border;
-          padding: 0;
-          margin: 0;
-          & .organizer_banner {
-            height: 210px;
-            border-bottom: $border;
-            & .organizer_title {
-              float: right;
-            }
-          }
-        }
-      }
-    }
-    /*& .expenses_budget {
-      & .panel.panel-default {
-        & .panel-body {
-          height: 120px;
-          & p#label_expense_description_title {
-            text-align: left;
-            font-family: Raleway-ExtraBold;
-            font-size: $font-l;
-            color: $font_primary;
-          }
-          & p#label_expense_amount {
-            text-align: right;
-            font-size: $font-xxl;
-            color: $font_primary;
-          }
-        }
-      }
-    }
-    & .chart_widget {
-      & .panel.panel-default {
-        & .panel-body {
-          & canvas {
-            width: 300px;
-            height: 300px;
-          }
-        }
-      }
-    }*/
-  }
-}   
 /*navigation bar loader */
 #load-indicator {
   height: 5px;
   display: none;
   margin-bottom: 0;
+}
+/* Home */
+.module_container {
+  & .module_search-panel {
+    & .panel-heading {
+        font-weight: bold;
+    }
+    & .panel-body {
+      &.module_item {
+        font-weight: bold;
+        color: $link_color;
+        padding: 8px 15px;
+        border-top: $border-darker;
+      }
+    }
+  }
+  & .module_result-panel {
+    & .panel-heading {
+      font-weight: bold;
+    }
+    & .panel-body {
+      min-height: 100%;
+    }
+  }
 }
