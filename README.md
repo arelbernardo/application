@@ -31,6 +31,8 @@ _these are for grunt task runner dependencies for compiling javascript files etc
 
 * run ``` php artisan migrate ``` then ``` php artisan db:seed ```
 
+### Documentation
+* see ```documentation``` folder for details
 
 ### author
 [arelbernardo](https://www.facebook.com/arelbernardo)
