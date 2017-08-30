@@ -28,7 +28,11 @@ class User extends Authenticatable
     ];
     
     // Relationships
-    
+
+    public function modules() {
+        return $this->belongsToMany(Module::class)->using(ModuleUser::class);
+    }
+
     public function expenses() {
         return $this->hasMany(Expense::class);
     }

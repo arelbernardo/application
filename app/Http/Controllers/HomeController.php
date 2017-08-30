@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $userModules = User::where('username', Auth::user()->username)->with('modules')->get()->toArray();
+        $modules = array();
+        if(count($userModules) > 0 && count($userModules[0]['modules']) > 0) {
+             $modules = $userModules[0]['modules'];
+        }
+        return view('home', array('modules' => $modules));//todo
     }
 }
