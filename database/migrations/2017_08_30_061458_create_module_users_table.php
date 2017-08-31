@@ -28,6 +28,6 @@ class CreateModuleUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('module_users');
+        Schema::dropIfExists('module_user');
     }
 }
