@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -21,4 +22,9 @@ class ProfileController extends Controller
         return view('resources.modal.expense_createupdate');
     }
     //transactional methods here
+    //static methods
+    public static function getAcquiredModulesByUser() {
+        return User::where('username', Auth::user()->username)->with('modules')->get()->toArray();
+    }
+
 }

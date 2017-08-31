@@ -11,11 +11,13 @@
                 </span>
             </div>
         </div>
-        <!--loop goes here-->
-        <div class="module_item panel-body"><a href="#">Item A</a></div>
-        <div class="module_item panel-body"><a href="#">Item B</a></div>
-        <div class="module_item panel-body"><a href="#">Item C</a></div>
-        <div class="module_item panel-body"><a href="#">Item D</a></div>
+        @if(count($modules) > 0)
+            @foreach($modules as $item)
+                <div class="module_item panel-body"><a href="{{$item['url']}}" title="{{$item['name']}}">{{$item['name']}}</a></div>
+            @endforeach
+        @else
+            <div class="module_item panel-body"><i>no modules found</i></div>
+        @endif
     </div>
 </div>
 <div class="module_container col-sm-8">

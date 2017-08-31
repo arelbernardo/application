@@ -25,11 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $userModules = User::where('username', Auth::user()->username)->with('modules')->get()->toArray();
+        $userModules = ProfileController::getAcquiredModulesByUser();
         $modules = array();
         if(count($userModules) > 0 && count($userModules[0]['modules']) > 0) {
              $modules = $userModules[0]['modules'];
         }
-        return view('home', array('modules' => $modules));//todo
+        return view('home', array('modules' => $modules));
     }
 }

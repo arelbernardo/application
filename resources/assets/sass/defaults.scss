@@ -89,10 +89,12 @@ html, body {
     }
     & .panel-body {
       &.module_item {
-        font-weight: bold;
-        color: $link_color;
         padding: 8px 15px;
         border-top: $border-darker;
+        & a {
+          font-weight: bold;
+          color: $link_color;
+        }
       }
     }
   }

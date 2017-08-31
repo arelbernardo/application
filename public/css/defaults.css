@@ -178,16 +178,19 @@ html, body {
 }
 /* line 91, ../../resources/assets/sass/defaults.scss */
 .module_container .module_search-panel .panel-body.module_item {
-  font-weight: bold;
-  color: #3278ff;
   padding: 8px 15px;
   border-top: 1px solid #d6d6d6;
 }
-/* line 100, ../../resources/assets/sass/defaults.scss */
+/* line 94, ../../resources/assets/sass/defaults.scss */
+.module_container .module_search-panel .panel-body.module_item a {
+  font-weight: bold;
+  color: #3278ff;
+}
+/* line 102, ../../resources/assets/sass/defaults.scss */
 .module_container .module_result-panel .panel-heading {
   font-weight: bold;
 }
-/* line 103, ../../resources/assets/sass/defaults.scss */
+/* line 105, ../../resources/assets/sass/defaults.scss */
 .module_container .module_result-panel .panel-body {
   min-height: 100%;
 }
