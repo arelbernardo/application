@@ -37,6 +37,20 @@ Route::group([
             'uses' => 'ProfileController@addExpenseModal'
         ]);
 });
+/*----------------APP----------------*/
+Route::group([
+    'prefix' => '/app',
+    'as' => 'module.'
+    ], function() {
+        Route::get('finance', [
+            'as' => 'finance',
+            'uses' => 'ExpenseController@index'
+        ]);
+        Route::get('notes', [
+            'as' => 'notes',
+            'uses' => 'NoteController@index'
+        ]);
+});
 
 
 
