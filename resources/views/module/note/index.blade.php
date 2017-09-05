@@ -1,4 +1,4 @@
 @extends('layouts.app')
 @section('content')
-    Note-taking page
+    @include('resources.tab.module_tabmenu')
 @endsection

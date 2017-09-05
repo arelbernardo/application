@@ -1,4 +1,4 @@
 @extends('layouts.app')
 @section('content')
-    Finance & Expense page
+    @include('resources.tab.module_tabmenu')
 @endsection
