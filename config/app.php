@@ -176,7 +176,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        /*
+         * Custom Helper Provider ... #arelbernardo@09112017
+         * */
+        App\Providers\CustomHelperServiceProvider::class
     ],
 
     /*
@@ -225,7 +228,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'CustomHelper' => Helpers\Custom\Helpers::class
     ],
 
 ];

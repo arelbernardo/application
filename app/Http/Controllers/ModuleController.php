@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Helpers\Custom\Helpers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 
 class ModuleController extends Controller
@@ -12,10 +12,14 @@ class ModuleController extends Controller
     const MODULE_EXPENSE = 'Expense';
     const MODULE_NOTE = 'Note';
 
-    const MODULE_INDEX_OVERVIEW = 0;
-    const MODULE_INDEX_ADD = 1;
-    const MODULE_INDEX_EDIT = 2;
-    const MODULE_INDEX_DELETE = 3;
+    const MODULE_EXPENSE_OVERVIEW = 0;
+    const MODULE_EXPENSE_MYEXPENSE = 1;
+    const MODULE_EXPENSE_INSIGHT = 2;
+    const MODULE_EXPENSE_SETTINGS = 3;
+
+    const EXPENSE_TAB = array(
+        'index' => self::MODULE_EXPENSE_OVERVIEW
+    );
 
     static $module_navarr = array(
         'active_module' => '',
@@ -38,7 +42,7 @@ class ModuleController extends Controller
                     'link' => 'finance/settings'
                 )
             ),
-            'active_tab' => self::MODULE_INDEX_OVERVIEW
+            'active_tab' => 0
         ),
         self::MODULE_NOTE => array(
             'tabs' => array(
@@ -55,20 +59,15 @@ class ModuleController extends Controller
                     'link' => ''
                 )
             ),
-            'active_tab' => self::MODULE_INDEX_OVERVIEW
+            'active_tab' => 0
         )
     );
 
     public function __construct() {
         $this->middleware('auth');
-        $active_module_temp = explode('@', Route::currentRouteAction());
-        $active_module = array();
-        $controller = explode('\\', $active_module_temp[0]);
-        $controller = $controller[count($controller) - 1];
-        array_push($active_module, $controller);
-        array_push($active_module, $active_module_temp[1]);
-
-        self::$module_navarr['active_module'] = in_array('ExpenseController', $active_module) ? self::MODULE_EXPENSE : self::MODULE_NOTE;
+        $current_action = Helpers::getCurrentControllerAction();
+        self::$module_navarr['active_module'] = 'ExpenseController' == $current_action['controller'] ? self::MODULE_EXPENSE : self::MODULE_NOTE;
+        self::$module_navarr[self::$module_navarr['active_module']]['active_tab'] = self::EXPENSE_TAB[$current_action['action']];
         View::share('module_navarr', self::$module_navarr);
     }
 }
