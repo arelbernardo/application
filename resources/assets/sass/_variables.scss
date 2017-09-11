@@ -92,11 +92,14 @@ $border_secondary_color: #d6d6d6;
 //theme color
 $theme_primary: #fff;
 $theme_shaded: #aaaaaa;
+//tab colors
+$tab_item_active: #ff9e1e;
 //alert colors
-$warning: #ff9e1e;
+$warning: $tab_item_active;
 //font
 $font_primary: #000;
 $font_secondary: #aaaaaa;
+$font_tabs: #555;
 //link colors
 $link_color: #3278ff;
 

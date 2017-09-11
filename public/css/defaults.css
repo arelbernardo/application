@@ -194,3 +194,30 @@ html, body {
 .module_container .module_result-panel .panel-body {
   min-height: 100%;
 }
+
+/*Module*/
+/* line 112, ../../resources/assets/sass/defaults.scss */
+.module_banner-container {
+  height: 70px;
+  border: 1px solid #e7e7e7;
+  margin-bottom: 16px;
+}
+
+/* line 119, ../../resources/assets/sass/defaults.scss */
+.module_nav-tabs li {
+  font-size: 12px;
+}
+/* line 121, ../../resources/assets/sass/defaults.scss */
+.module_nav-tabs li a {
+  color: #555;
+  padding: 5px 10px;
+}
+/* line 126, ../../resources/assets/sass/defaults.scss */
+.module_nav-tabs li.active a {
+  margin-top: -4px;
+  border-top: 5px solid #ff9e1e !important;
+}
+/* line 129, ../../resources/assets/sass/defaults.scss */
+.module_nav-tabs li.active a:hover {
+  border-top: 5px solid #ff9e1e !important;
+}

@@ -12,6 +12,53 @@ class ModuleController extends Controller
     const MODULE_EXPENSE = 'Expense';
     const MODULE_NOTE = 'Note';
 
+    const MODULE_INDEX_OVERVIEW = 0;
+    const MODULE_INDEX_ADD = 1;
+    const MODULE_INDEX_EDIT = 2;
+    const MODULE_INDEX_DELETE = 3;
+
+    static $module_navarr = array(
+        'active_module' => '',
+        self::MODULE_EXPENSE => array(
+            'tabs' => array(
+                array(
+                    'name' => 'Overview',
+                    'link' => '/app/finance'
+                ),
+                array(
+                    'name' => 'My Expenses',
+                    'link' => 'finance/myexpense'
+                ),
+                array(
+                    'name' => 'Insight',
+                    'link' => 'finance/insight'
+                ),
+                array(
+                    'name' => 'Settings',
+                    'link' => 'finance/settings'
+                )
+            ),
+            'active_tab' => self::MODULE_INDEX_OVERVIEW
+        ),
+        self::MODULE_NOTE => array(
+            'tabs' => array(
+                array(
+                    'name' => 'Add',
+                    'link' => ''
+                ),
+                array(
+                    'name' => 'Edit',
+                    'link' => ''
+                ),
+                array(
+                    'name' => 'Delete',
+                    'link' => ''
+                )
+            ),
+            'active_tab' => self::MODULE_INDEX_OVERVIEW
+        )
+    );
+
     public function __construct() {
         $this->middleware('auth');
         $active_module_temp = explode('@', Route::currentRouteAction());
@@ -21,43 +68,7 @@ class ModuleController extends Controller
         array_push($active_module, $controller);
         array_push($active_module, $active_module_temp[1]);
 
-        $module_navarr = array(
-            'active_module' => in_array('ExpenseController', $active_module) ? self::MODULE_EXPENSE : self::MODULE_NOTE,
-            self::MODULE_EXPENSE => array(
-                'tabs' => array(
-                    array(
-                        'name' => 'Add',
-                        'link' => ''
-                    ),
-                    array(
-                        'name' => 'Edit',
-                        'link' => ''
-                    ),
-                    array(
-                        'name' => 'Delete',
-                        'link' => ''
-                    )
-                ),
-                'active_tab' => 0
-            ),
-            self::MODULE_NOTE => array(
-                'tabs' => array(
-                    array(
-                        'name' => 'Add',
-                        'link' => ''
-                    ),
-                    array(
-                        'name' => 'Edit',
-                        'link' => ''
-                    ),
-                    array(
-                        'name' => 'Delete',
-                        'link' => ''
-                    )
-                ),
-                'active_tab' => 0
-            )
-        );
-        View::share('module_navarr', $module_navarr);
+        self::$module_navarr['active_module'] = in_array('ExpenseController', $active_module) ? self::MODULE_EXPENSE : self::MODULE_NOTE;
+        View::share('module_navarr', self::$module_navarr);
     }
 }

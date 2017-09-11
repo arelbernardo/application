@@ -107,3 +107,29 @@ html, body {
     }
   }
 }
+/*Module*/
+//banner
+.module_banner-container {
+  height: 70px;
+  border: $border;
+  margin-bottom: 16px;
+}
+//module nav-bar
+.module_nav-tabs {
+  & li {
+    font-size: $font-s;
+    & a {
+      color: $font_tabs;
+      padding: 5px 10px;
+    }
+    &.active {
+      & a {
+        margin-top: -4px;
+        border-top: 5px solid $tab_item_active !important;
+        &:hover {
+          border-top: 5px solid $tab_item_active !important ;
+        }
+      }
+    }
+  }
+}

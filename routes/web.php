@@ -42,10 +42,25 @@ Route::group([
     'prefix' => '/app',
     'as' => 'module.'
     ], function() {
-        Route::get('finance', [
-            'as' => 'finance',
-            'uses' => 'ExpenseController@index'
-        ]);
+        Route::group([
+            'prefix' => '/finance',
+            'as' => 'finance.'
+            ], function () {
+                Route::get('/', [
+                    'as' => 'index',
+                    'uses' => 'ExpenseController@index'
+                ]);
+                Route::get('/myexpense', [
+                    'as' => 'myexpense',
+                    'uses' => 'ExpenseController@myExpense'
+                ]);
+                Route::get('/insight', [
+                    'as' => 'insight',
+                    'uses' => 'ExpenseController@insight'
+                ]);
+            }
+        );
+    
         Route::get('notes', [
             'as' => 'notes',
             'uses' => 'NoteController@index'
