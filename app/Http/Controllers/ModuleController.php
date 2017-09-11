@@ -17,8 +17,11 @@ class ModuleController extends Controller
     const MODULE_EXPENSE_INSIGHT = 2;
     const MODULE_EXPENSE_SETTINGS = 3;
 
-    const EXPENSE_TAB = array(
-        'index' => self::MODULE_EXPENSE_OVERVIEW
+    const EXPENSE_TAB = array(//array keys are method names
+        'index' => self::MODULE_EXPENSE_OVERVIEW,
+        'myExpense' => self::MODULE_EXPENSE_MYEXPENSE,
+        'insight' => self::MODULE_EXPENSE_INSIGHT,
+        'settings' => self::MODULE_EXPENSE_SETTINGS
     );
 
     static $module_navarr = array(
@@ -31,15 +34,15 @@ class ModuleController extends Controller
                 ),
                 array(
                     'name' => 'My Expenses',
-                    'link' => 'finance/myexpense'
+                    'link' => '/app/finance/myexpense'
                 ),
                 array(
                     'name' => 'Insight',
-                    'link' => 'finance/insight'
+                    'link' => '/app/finance/insight'
                 ),
                 array(
                     'name' => 'Settings',
-                    'link' => 'finance/settings'
+                    'link' => '/app/finance/settings'
                 )
             ),
             'active_tab' => 0

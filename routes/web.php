@@ -58,6 +58,10 @@ Route::group([
                     'as' => 'insight',
                     'uses' => 'ExpenseController@insight'
                 ]);
+                Route::get('/settings', [
+                    'as' => 'insight',
+                    'uses' => 'ExpenseController@settings'
+                ]);
             }
         );
     
