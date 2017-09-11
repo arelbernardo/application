@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Session\TokenMismatchException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
@@ -59,6 +60,8 @@ class Handler extends ExceptionHandler
                 'code' => self::CODE_PAGE_NOT_FOUND,
                 'msg' => self::MSG_NOT_FOUND),
             404);
+        } else if ($exception instanceof TokenMismatchException) {//Token Mismatch
+            //todo
         }
         return parent::render($request, $exception);
     }
