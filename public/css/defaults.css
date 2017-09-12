@@ -211,13 +211,15 @@ html, body {
 .module_nav-tabs li a {
   color: #555;
   padding: 5px 10px;
+  border-radius: 0 !important;
+  border: 0 !important;
 }
-/* line 126, ../../resources/assets/sass/defaults.scss */
+/* line 128, ../../resources/assets/sass/defaults.scss */
 .module_nav-tabs li.active a {
   margin-top: -4px;
   border-top: 5px solid #ff9e1e !important;
 }
-/* line 129, ../../resources/assets/sass/defaults.scss */
+/* line 131, ../../resources/assets/sass/defaults.scss */
 .module_nav-tabs li.active a:hover {
   border-top: 5px solid #ff9e1e !important;
 }

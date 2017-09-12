@@ -121,6 +121,8 @@ html, body {
     & a {
       color: $font_tabs;
       padding: 5px 10px;
+      border-radius: 0 !important;
+      border: 0 !important;
     }
     &.active {
       & a {
